@@ -1,4 +1,8 @@
 @media (min-width: 1024px) {
+    header {
+      padding-bottom: 43px;
+    }
+  
     nav {
         margin-top: 0px;
     }
@@ -52,13 +56,17 @@
     }
 
     intro {
-        min-height: calc(100vh - 163px);
+        min-height: calc(100vh - 201px);
     }
   
-  .intro_wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    .intro_wrapper {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
+    footer {
+      padding: 45px 0px 10px 0px;  
+    }
+  
     .footer_inner {
         flex-direction: row;
     }
@@ -70,7 +78,7 @@
         transform: translateX(-50%);
         top: 0;
         font-size: 14px;
-        background-color: #FFF;
+        background-color: transparent;
         color: #f54443;
         padding: 5px 8px;
         border-radius: 5px;
@@ -81,13 +89,13 @@
         cursor: auto;
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-    
+
     .footer_element .tooltip::before {
         position: absolute;
         content: "";
         height: 8px;
         width: 8px;
-        background-color: #FFF;
+        background-color: transparent;
         bottom: -3px;
         left: unset;
         top: unset;
@@ -95,7 +103,7 @@
         transform: translate(-50%) rotate(45deg);
         transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-      
+
     .footer_element.active .tooltip {
         top: -35px;
         right: unset;
@@ -105,11 +113,11 @@
         text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
         background-color: #000;
     }
-    
+
     .footer_element.active .tooltip::before {
         background-color: #000;
     }
-    
+
     .footer_element:hover .tooltip,
     .footer_element:hover .tooltip::before {
         background-color: #FFF;

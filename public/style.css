@@ -169,7 +169,7 @@ footer {
     transform: translateY(-50%);
     right: 0px;
     font-size: 14px;
-    background-color: #FFF;
+    background-color: transparent;
     color: #f54443;
     padding: 5px 8px;
     border-radius: 5px;
@@ -186,7 +186,7 @@ footer {
     content: "";
     height: 8px;
     width: 8px;
-    background-color: #000000;
+    background-color: transparent;
     left: -3px;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);

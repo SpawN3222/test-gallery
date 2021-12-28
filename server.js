@@ -3,6 +3,8 @@ const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const app = express();
 
+app.use(express.json());
+
 const PORT = 8000;
 app.use(express.static(__dirname + '/public'));
 
@@ -36,6 +38,12 @@ app.use(fileUpload());
 app.get('/ping', function(req, res) {
   res.send('pong');
 });
+
+app.post('/delete', function(req, res) {
+  let name = req.body.name;
+  fs.unlinkSync(__dirname + '/public/img/' + name);
+  res.json({status: true})
+})
 
 app.post('/upload', function(req, res) {
   let sampleFile;
