@@ -1,0 +1,118 @@
+@media (min-width: 1024px) {
+    nav {
+        margin-top: 0px;
+    }
+
+    .nav_link .tooltip {
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        font-size: 14px;
+        background-color: #FFF;
+        color: #f54443;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+        cursor: auto;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .nav_link .tooltip::before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        background-color: #FFF;
+        top: -3px;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+      
+    .nav_link:hover .tooltip {
+        bottom: -35px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        background-color: #FFF;
+    }
+    
+    .nav_link:hover .tooltip::before {
+        background-color: #FFF;
+    }
+
+    .header-inner {
+        flex-direction: row;
+    }
+
+    intro {
+        min-height: calc(100vh - 163px);
+    }
+  
+  .intro_wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+    .footer_inner {
+        flex-direction: row;
+    }
+
+    .footer_element .tooltip {
+        position: absolute;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        font-size: 14px;
+        background-color: #FFF;
+        color: #f54443;
+        padding: 5px 8px;
+        border-radius: 5px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+        cursor: auto;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .footer_element .tooltip::before {
+        position: absolute;
+        content: "";
+        height: 8px;
+        width: 8px;
+        background-color: #FFF;
+        bottom: -3px;
+        left: unset;
+        top: unset;
+        left: 50%;
+        transform: translate(-50%) rotate(45deg);
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+      
+    .footer_element.active .tooltip {
+        top: -35px;
+        right: unset;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        background-color: #000;
+    }
+    
+    .footer_element.active .tooltip::before {
+        background-color: #000;
+    }
+    
+    .footer_element:hover .tooltip,
+    .footer_element:hover .tooltip::before {
+        background-color: #FFF;
+    }
+
+}
