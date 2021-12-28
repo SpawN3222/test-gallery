@@ -71,9 +71,11 @@ function formToggle() {
   }
 }
 
+let currentImg = '';
+
 function previewToggle(img) {
-  console.log(img);
   if (img) {
+    currentImg = img
     document.querySelector(`#previewImg`).src = `img/${img}`;
     document.querySelector(`#previewName`).innerHTML = img;
   }
@@ -89,4 +91,11 @@ function previewToggle(img) {
       modal.classList.toggle(`active`);
     }, 10)
   }
+}
+
+function deleteImage() {
+  axios.post('/delete', {name: currentImg}).then((res) => {
+    console.log(res.data);
+    window.location = "/"
+  })
 }
