@@ -116,6 +116,15 @@ footer {
   height: 120px;
 }
 
+.img_plus {
+  transform: scale(1);
+  transition: 0.2s ease-in-out;
+}
+
+.img_container:hover .img_plus {
+  transform: scale(1.3);
+}
+
 .img_container img {
   width: 100%;
   object-fit: cover;
@@ -200,4 +209,132 @@ footer {
 .footer_element:hover .tooltip,
 .footer_element:hover .tooltip::before {
     background-color: #FFF;
+}
+
+
+/*! Modal Form*/
+.modal {
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  transition: 0.5s ease-in-out;
+}
+
+.modal.active {
+  opacity: 1;
+}
+
+.modal_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.modal_inner {
+  padding: 0 38px 0 20px;
+  margin: 0 auto;
+}
+
+.modal_inner form {
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form input {
+  outline: none;
+  background: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  
+  transition: 0.2s ease-in-out;
+}
+
+form input:hover {
+  background: white;
+  color: black;
+}
+
+form label {
+  cursor: pointer;
+  margin-right: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+form label:hover {
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+.upload_preview {
+  width: 100%;
+  max-width: 100vw;
+  object-fit: cover;
+  display: block;
+  max-height: 600px;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.preview {
+  width: 100%;
+  max-width: 100vw;
+  object-fit: cover;
+  display: block;
+  max-height: 600px;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.previewControl {
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.previewControl p {
+  margin-right: 20px;
+}
+
+.previewControl button {
+  outline: none;
+  background: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  
+  transition: 0.2s ease-in-out;
+}
+
+.previewControl button:hover {
+  background: white;
+  color: black;
 }

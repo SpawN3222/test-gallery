@@ -24,7 +24,7 @@
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class="header_logo">SpawN3222</div>
+                <div class="header_logo">SpawN3222 gallery</div>
 
                 <nav>
                     <a class="nav_link" href="https://github.com/SpawN3222" target="_blank">
@@ -65,19 +65,8 @@
     <intro>
         <div class="container">
             <div class="intro-inner">
-              
-              <form ref='uploadForm' 
-                id='uploadForm' 
-                action='/upload' 
-                method='post' 
-                encType="multipart/form-data">
-                  <input type="file" name="sampleFile" />
-                  <input type='submit' value='Upload!' />
-              </form>		
 
-              <div class="intro_wrapper">
-                
-              </div>
+              <div class="intro_wrapper"></div>
               
             </div>
         </div>
@@ -105,6 +94,34 @@
             </div>
         </div>
     </footer>
+  
+  
+    <div class="modal" id="modal_form">
+      <div class="modal_inner">
+        <img id="myImg" class="upload_preview" src="#">
+        <form ref='uploadForm'  id='uploadForm'  action='/upload'  method='post'  encType="multipart/form-data">
+          <label id="file_name" for="file-upload" class="custom-file-upload">
+              Click to select file...
+          </label>
+          <input style="display: none;" id="file-upload" type="file" name="sampleFile"/>
+          <input type='submit' value='Upload!' />
+        </form>		
+        <div class="modal_bg" onclick="formToggle()"></div>
+      </div>
+    </div>
+  
+  <div class="modal" id="modal_img_preview">
+      <div class="modal_inner">
+        <img id="previewImg" class="preview" src="#">
+        <div class="previewControl">
+          <p id="previewName"></p>
+          <button>Delete!</button>
+        </div>
+        
+        <div class="modal_bg" onclick="previewToggle()"></div>
+      </div>
+    </div>
+  
   
     <script src="script.js"></script>
 </body>
